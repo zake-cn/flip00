@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2023.10.19)  27 OCT 2023 13:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2023.10.19)  27 OCT 2023 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1305,11 +1305,11 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \ESO@tempdima=\dimen411
 \ESO@tempdimb=\dimen412
 )
-
-Package gitinfo2 Warning: I can't find the file '.git/gitHeadInfo.gin'.
-(gitinfo2)                All git metadata has been set to '(None)'.
-
-) (c:/texlive/2022/texmf-dist/tex/latex/units/nicefrac.sty
+Package gitinfo2 Info: gitinfo2 found : ../.git/gitHeadInfo.gin
+(gitinfo2)              on input line 128.
+ (../.git/gitHeadInfo.gin) (c:/texlive/2022/texmf-dist/tex/latex/gitinfo2/gitexinfo.sty
+Package: gitexinfo 2015/11/22 v2.0.7 Auxiliary package for gitinfo2
+)) (c:/texlive/2022/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip97
 \L@UnitsRaiseTextstyle=\skip98
@@ -2140,12 +2140,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 54232 strings out of 478269
- 1197391 string characters out of 5850370
- 1727193 words of memory out of 5000000
- 71376 multiletter control sequences out of 15000+600000
+ 54285 strings out of 478269
+ 1198434 string characters out of 5850370
+ 1729189 words of memory out of 5000000
+ 71428 multiletter control sequences out of 15000+600000
  518454 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,15n,117p,2374b,1077s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report-slides.dvi (40 pages, 670872 bytes).
+Output written on report-slides.dvi (40 pages, 671072 bytes).
