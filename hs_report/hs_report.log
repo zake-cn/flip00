@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2023.10.19)  1 DEC 2023 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2023.10.19)  4 DEC 2023 22:19
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1199,14 +1199,11 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \ESO@tempdima=\dimen336
 \ESO@tempdimb=\dimen337
 )
-Package gitinfo2 Info: gitinfo2 found : ../.git/gitHeadInfo.gin
-(gitinfo2)              on input line 128.
 
-(../.git/gitHeadInfo.gin)
-(c:/texlive/2022/texmf-dist/tex/latex/gitinfo2/gitexinfo.sty
-Package: gitexinfo 2015/11/22 v2.0.7 Auxiliary package for gitinfo2
-))
-(c:/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package gitinfo2 Warning: I can't find the file '.git/gitHeadInfo.gin'.
+(gitinfo2)                All git metadata has been set to '(None)'.
+
+) (c:/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
 \f@nch@headwidth=\skip90
@@ -1335,69 +1332,12 @@ or `english'. on input line 24.
 \openout7 = `hs_report.toc'.
 
  [1] (./tex/mainbody.tex
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 6.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmss' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
 (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-Including 'JournalOnly' comment.
-\openout3 = `comment.cut'.
-
- Straight input of comment.cut. (./comment.cut)
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-LaTeX Warning: Marginpar on page 2 moved.
-
-Including 'ConferenceOnly' comment.
-\openout3 = `comment.cut'.
-
- Straight input of comment.cut.
-(./comment.cut)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: ./graphics/logos/tulip-logo.eps Graphic file (type eps)
 
 <./graphics/logos/tulip-logo.eps>
@@ -1406,7 +1346,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 14.79996pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.79996pt}.
 
-[2]
+[2])
 File: ./graphics/logos/tulip-logo.eps Graphic file (type eps)
  <./graphics/logos/tulip-logo.eps>
 
@@ -1422,35 +1362,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 14.79996pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.79996pt}.
 
-[4])
-File: ./graphics/logos/tulip-logo.eps Graphic file (type eps)
- <./graphics/logos/tulip-logo.eps>
-
-Package fancyhdr Warning: \footskip is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.79996pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.79996pt}.
-
-[5] (./hs_report.bbl) (./hs_report.tdo
-Overfull \hbox (1544.74683pt too wide) in paragraph at lines 2--2
- [][][] [] [][]  
- []
-
-
-Overfull \hbox (76.0785pt too wide) in paragraph at lines 6--6
- [][][] [] [][]  
- []
-
-
-Overfull \hbox (1010.69049pt too wide) in paragraph at lines 8--8
- [][][] [] [][]  
- []
-
-
-Overfull \hbox (350.93968pt too wide) in paragraph at lines 9--9
- [][][] [] [][]  
- []
-
-)
+[4] (./hs_report.bbl) (./hs_report.tdo)
 \tf@tdo=\write8
 \openout8 = `hs_report.tdo'.
 
@@ -1465,22 +1377,25 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 14.79996pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.79996pt}.
 
-[6]
+[5]
 No complaints by nag.
 (./hs_report.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Package rerunfilecheck Warning: File `hs_report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: File `hs_report.out' has not changed.
-(rerunfilecheck)             Checksum: D59CCAC13BF91EB59662DE691E29DCDE;967.
+Package rerunfilecheck Info: Checksums for `hs_report.out':
+(rerunfilecheck)             Before: A9F2FB2BE7A2691A8D439631850A6CD7;1306
+(rerunfilecheck)             After:  65D32F24C790ADDDE4E917E57F80FE9B;1566.
  ) 
 Here is how much of TeX's memory you used:
- 38640 strings out of 478269
- 783100 string characters out of 5850370
- 1254394 words of memory out of 5000000
- 56039 multiletter control sequences out of 15000+600000
- 476792 words of font info for 57 fonts, out of 8000000 for 9000
+ 38275 strings out of 478269
+ 775357 string characters out of 5850370
+ 1202989 words of memory out of 5000000
+ 55682 multiletter control sequences out of 15000+600000
+ 476187 words of font info for 55 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 120i,13n,134p,1006b,978s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 120i,13n,134p,1006b,798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hs_report.dvi (6 pages, 106480 bytes).
+Output written on hs_report.dvi (5 pages, 34716 bytes).
