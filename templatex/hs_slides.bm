@@ -1,0 +1,16 @@
+\pdbookmark{sec.1}{}{3}{Introduction}
+\pdbookmark{sec.1.slide}{sec.1}{4}{Ordinal Regression with a Tabular Wine Quality Dataset}
+\pdbookmark{sec.1.slide}{sec.1}{5}{Dataset Description}
+\pdbookmark{sec.2}{}{6}{Preliminaries}
+\pdbookmark{sec.2.slide}{sec.2}{8}{Group Outlying Aspects Mining}
+\pdbookmark{sec.3}{}{13}{Related Work and Challenges}
+\pdbookmark{sec.3.slide}{sec.3}{14}{Related Work - Outlying Aspects Mining}
+\pdbookmark{sec.3.slide}{sec.3}{17}{Challenges (1)}
+\pdbookmark{sec.4}{}{20}{GOAM Algorithm}
+\pdbookmark{sec.4.slide}{sec.4}{22}{Step One - Group Feature Extraction}
+\pdbookmark{sec.4.slide}{sec.4}{23}{Step Two - Outlying Degree Scoring}
+\pdbookmark{sec.4.slide}{sec.4}{25}{Step Three - Outlying Aspects Identification}
+\pdbookmark{sec.5}{}{30}{Evaluation Results}
+\pdbookmark{sec.5.slide}{sec.5}{32}{Synthetic Dataset}
+\pdbookmark{sec.5.slide}{sec.5}{34}{NBA Dataset}
+\pdbookmark{sec.6}{}{38}{Conclusion}

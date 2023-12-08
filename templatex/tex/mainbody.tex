@@ -1,201 +1,222 @@
 %=================================================================
-\section{Introduction}\label{sec-intro}
+\section{Introduction}
+Ordinal regression was conducted on a dataset derived from a deep learning model trained on the quality dataset of red variants of the "Vinho Verde" wine from Spain. This dataset characterizes the impact of various chemical substances present in wine on its quality. The quality grades are ordinal and imbalanced, with common wines being significantly more prevalent than either high-quality or low-quality wines.
 
+\section{Preliminaries} 
+\subsection{Feature}\phantom{...}
 
-%\todo{Narrow down to a topic; Dig a hole; Fill the hole}
-\todo{Formula for Introduction}
-
-
-
-%\gangli{``narrow in on topic'' reminds you 
-%that readers and reviewers only know that this is a AI or HTM research paper (and maybe have read the title/abstract). 
-%You need to help them figure out what topic and area of research paper this is. 
-%You _don't_ need to wax poetic about the topic's importance.}
-
-%\gangli{`dig a hole'' reminds you that 
-%you need to convince the reader that there's a problem with the state of the world. 
-%Prior work may exist but it's either missing something important or there's a missing opportunity. 
-%The reader should be drooling for a bright future just out of reach.}
-
-%\gangli{``fill the hole'' reminds you to show the reader 
-%how and why the paper they're reading will fix these problems and deliver us into a better place. 
-%You don't need a whirlwind summary of the technical details, 
-%but you need readers convinced (and in a good mood) to keep reading.}
-
-\gangli{A good paper introduction is fairly formulaic. 
-If you follow a simple set of rules, 
-you can write a very good introduction. 
-The following outline can be varied. 
-For example, 
-you can use two paragraphs instead of one, 
-or you can place more emphasis on one aspect of the intro than another. 
-But in all cases, 
-all of the points below need to be covered in an introduction, 
-and in most papers, 
-you don't need to cover anything more in an introduction.}
-
-
-
-%\todo{The importance of the area}
-%\blindtext
-\todo{Motivation}
-At a high level, 
-what is the problem area you are working in and why is it important? 
-It is important to set the larger context here. 
-Why is the problem of interest and importance to the larger community?
-
-
-%\todo{The problems faced by most current methods}
-%\blindtext
-\todo{What is the specific problem considered in this paper?}
-This paragraph narrows down the topic area of the paper. 
-In the first paragraph you have established general context and importance. 
-Here you establish specific context and background.
-
-%\todo{What can be addressed by existing methods; Why those problems are challenges to existing methods?}
-%\blindtext
-\todo{Contribution}
-"In this paper, we show that ...". 
-This is the key paragraph in the intro - you summarize, 
-in one paragraph, 
-what are the main contributions of your paper given the context 
-you have established in paragraphs 1 and 2. 
-What is the general approach taken? 
-Why are the specific results significant? 
-This paragraph must be really good. 
-
-You should think about how to structure these one or 
-two paragraph summaries of what your paper is all about. 
-If there are two or three main results, 
-then you might consider itemizing them with bullets or in test. 
+In order to facilitate an understanding of the meanings of various data points in the dataset, it is necessary to provide a brief introduction to several features of wine that are relevant to the dataset.
 \begin{itemize}
-	\item e.g., First ...
-	\item e.g., Second ...
-	\item e.g., Third ...
+	\item \textbf{Fixed Acidity}: Most acids involved with wine are fixed or nonvolatile (do not evaporate readily).
+	\item \textbf{Volatile Acidity}: The amount of acetic acid in wine, which at too high levels can lead to an unpleasant, vinegar taste.
+	\item \textbf{Citric Acid}: Found in small quantities, citric acid can add 'freshness' and flavor to wines.
+	\item \textbf{Residual Sugar}: The amount of sugar remaining after fermentation stops. Wines with less than 1 gram/liter are rare, and those with more than 45 grams/liter are considered sweet.
+	\item \textbf{Chlorides}: The amount of salt in the wine.
+	\item \textbf{Free Sulfur Dioxide}: The free form of SO2 exists in equilibrium between molecular SO2 (as a dissolved gas) and bisulfite ion; it prevents microbial growth and the oxidation of wine.
+	\item \textbf{Total Sulfur Dioxide}: Amount of free and bound forms of SO2. In low concentrations, SO2 is mostly undetectable in wine, but at free SO2 concentrations over 50 ppm, SO2 becomes evident in the nose and taste of wine.
+	\item \textbf{Density}: The density of wine is close to that of water, depending on the percent alcohol and sugar content.
+	\item \textbf{pH}: Describes how acidic or basic a wine is on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale.
+	\item \textbf{Sulphates}: A wine additive that can contribute to sulfur dioxide gas (SO2) levels, acting as an antimicrobial and antioxidant.
+	\item \textbf{Alcohol}: The percent alcohol content of the wine.
+	\item \textbf{Quality}: Wine quality rating.
 \end{itemize}
-If the results fall broadly into two categories, 
-you can bring out that distinction here. 
-For example, "Our results are both theoretical and applied in nature. 
-(two sentences follow, one each on theory and application)"
+\subsection{SMOTE}\phantom{...}
 
-%\todo{What provides the motivation of this work? What are the research issues? What is the rationale of this work? }
-%\blindtext
-\todo{At a high level what are the differences in what you are doing, and what others have done? }
-Keep this at a high level, 
-you can refer to a future section where specific details and differences will be given. 
-But it is important for the reader to know at a high level, 
-what is new about this work compared to other work in the area.
+In the provided dataset, the samples with quality grades 5 and 6 are substantially more numerous than those of other grades, necessitating a consideration of the potential impacts of employing the SMOTE technique.
 
-%\todo{What we have done and what are the contributions.}
-%\blindtext
-\todo{A roadmap for the rest of the paper}
-"The remainder of this paper is structured as follows..." 
-Give the reader a roadmap for the rest of the paper. 
-Avoid redundant phrasing, 
-"In Section 2, In section 3, ... In Section 4, ... " etc.
+SMOTE (Synthetic Minority Over-sampling Technique) is a method employed in data science and machine learning to address the issue of class imbalance in classification problems. Class imbalance refers to the scenario where the instance count of one class (the minority class) is significantly lower than that of other classes (the majority classes). This imbalance can lead to biased performance or suboptimal results in machine learning models, as they are often dominated by the majority class and tend to overlook the minority class. 
 
-\gangli{A few general tips:
-Don't spend a lot of time into the introduction 
-telling the reader about what you don't do in the paper. 
-Be clear about what you do do.
-Does each paragraph have a theme sentence that sets the stage for the entire paragraph? Are the sentences and topics in the paragraph all related to each other?}
+The operational mechanism of SMOTE involves:
 
-\gangli{Does each paragraph have a theme 
-sentence that sets the stage for the entire paragraph? 
-Are the sentences and topics in the paragraph all related to each other?}
+Sample Selection: Initially, SMOTE selects a sample from the minority class.
+Neighbor Identification: It then identifies the k-nearest neighbors of this sample in the feature space, where k is typically a small integer.
+Synthesis of New Samples: For each selected minority class sample, SMOTE generates synthetic samples. This is achieved through linear interpolation in the feature space between the selected sample and its chosen neighbor.
+Repetition of the Process: This process is repeated until the desired class balance is achieved.
 
-\gangli{Do all of your tenses match up in a paragraph?}
+Key aspects of SMOTE include:
 
-Test citation~\cite{BL12J01}. 
-\begin{JournalOnly}
-and~\citep{BJL11J01} or~\citet{BJL11J01}.
-\end{JournalOnly}
+Over-sampling Technique: It is an over-sampling approach, as opposed to under-sampling, which involves reducing the number of majority class samples.
 
-This is for~\cref{tbl:overall-experiments}, 
-\todo[fancyline]{Testing.}
-and this is for~\cref{sec-conclusions}.
-\todo[noline]{A note with no line back to the text.}%
-\gangli{This is comment from Gang.}
-\qwu{Response from QW}
+Creation of Synthetic Samples: SMOTE generates new, synthetic samples rather than merely duplicating existing ones. This contributes to enhancing the diversity of the dataset.
 
-Number:
-\num{123}.
-\numlist{10;30;50;70},
-\numrange{10}{30},
-\SIlist{10;30;45}{\metre},
-and
-\SI{10}{\percent}
-
-\missingfigure[figcolor=white]{Testing figcolor}
+Mitigating Overfitting: By generating synthetic samples, SMOTE aids in reducing the overfitting issues that simple over-sampling might cause.
 
 
-\begin{ConferenceOnly}
-We have \SI{10}{\hertz},
-\si{\kilogram\metre\per\second},
-the range: \SIrange{10}{100}{\hertz}.
-$\nicefrac[]{1}{2}$.
+\subsection{KAPPA}\phantom{...}
 
-\missingfigure{Make a sketch of the structure of a trebuchet.}
+Submissions are scored based on the quadratic weighted kappa, which measures the agreement between two outcomes. This metric typically varies from 0 (random agreement) to 1 (complete agreement). In the event that there is less agreement than expected by chance, the metric may go below 0.
 
-\end{ConferenceOnly}
+The quadratic weighted kappa is calculated as follows. First, an N x N histogram matrix O is constructed, such that Oi,j corresponds to the number of Ids i (actual) that received a predicted value j. An N-by-N matrix of weights, w, is calculated based on the difference between actual and predicted values:
+
+\[ w_{i,j} = \frac{(i - j)^2}{(N - 1)^2} \]
+
+An N-by-N histogram matrix of expected outcomes, E, is calculated assuming that there is no correlation between values.  This is calculated as the outer product between the actual histogram vector of outcomes and the predicted histogram vector, normalized such that E and O have the same sum.
+
+From these three matrices, the quadratic weighted kappa is calculated as: 
+
+\[ \kappa = 1 - \frac{\sum_{i,j} w_{i,j} O_{i,j}}{\sum_{i,j} w_{i,j} E_{i,j}} \]
+
+\section{Experiment and analysis}
+\subsection{Dataset Analysis}\phantom{...}
+
+Analysis of the Original Dataset, Training Dataset, and Testing Dataset
+
+\subsubsection{Null Value Detection}\phantom{...}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{tex/NullValueDetection}
+	\caption{Null Value Detection}
+	\label{fig:nullvaluedetection}
+\end{figure}
+
+The datasets do not contain any missing values, thus negating the necessity for missing value processing.
+
+\subsubsection{Target Variable Analysis}\phantom{...}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{tex/TargetVariableAnalysis}
+	\caption{Target Variable Analysis}
+	\label{fig:targetvariableanalysis}
+\end{figure}
+
+\subsubsection{Univariate Analysis}\phantom{...}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{tex/UnivariateAnalysis}
+	\caption{Univariate Analysis}
+	\label{fig:univariateanalysis}
+\end{figure}
+
+For all three datasets, the distributions are almost identical, thus enabling the amalgamation of the original dataset with the training dataset for the purpose of training.
+
+\subsection{Combining Data and Relationship matrix}\phantom{...}
+
+Merge the original dataset and the training dataset to form a combined training dataset
+
+Calculate the pairwise Spearman correlation coefficients for all numerical columns in the dataset and plot them as a matrix. The Spearman correlation coefficient is a non-parametric rank correlation measure used to assess the monotonic relationship between two variables.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{tex/CombinedTrainingDataset}
+	\caption{Combined Training Dataset}
+	\label{fig:combinedtrainingdataset}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{tex/TestingDataset}
+	\caption{Testing Dataset}
+	\label{fig:testingdataset}
+\end{figure}
+
+In the heatmap, the depth of the cell color represents the strength of the correlation, with darker colors indicating stronger correlations. Positive correlations are represented by one color, while negative correlations are depicted by another.
+
+In features other than the "quality" attribute, the correlation or relational patterns among these features in both the combined dataset and the testing dataset exhibit a high degree of similarity.
+
+\subsection{Multivariate Analysis wrt Quality}\phantom{...}
+
+\subsubsection{Relation with Quality using pairplot (Combined Training and Org Data)}\phantom{...}
+
+Analyzing the relationship between features and quality through visual methods.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{tex/pairplot}
+	\caption{Relation with Quality using pairplot}
+	\label{fig:pairplot}
+\end{figure}
+
+Looking at alcohol vs quality it seems drink with higher alcohol content tends to have high ratings.
+
+Looking at volatile acidity it seems drink with lower volatile acidity content tends to have higher ratings.
+
+Looking at sulphates vs quality it seems drink with higher alcohol content tends to have high ratings.
+
+\subsubsection{Relation with Quality using boxplot (Combined Training and Org Data))}\phantom{...}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{tex/boxplot}
+	\caption{Relation with Quality using boxplot}
+	\label{fig:boxplot}
+\end{figure}
+
+Median of high rating drinks is higher in sulphates, alcohol and citric acid.
+
+Median of high rating drinks is lower in chlorides, density and residual sugar.
+
+\subsection{Analysis So Far}\phantom{...}
+
+Distribution between training , test \& Original data is approx same.
+
+Relationship between variables is similliar among test and combined data (training \& Original data).
+
+\subsection{Data Preparation ( Normal and Smote )}\phantom{...}
+
+\subsubsection{Regular Training Dataset}\phantom{...}
+
+Conduct a statistical count of the number of samples with different quality levels in the combined training dataset.
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline
+		Quality & Count \\
+		\hline
+		5 & 925 \\
+		6 & 868 \\
+		7 & 333 \\
+		4 & 62 \\
+		8 & 38 \\
+		3 & 13 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+It is evident that the dataset exhibits class imbalance.
+
+\subsubsection{Smote Training Dataset}\phantom{...}
+
+Process the combined training dataset using the SMOTE technique to generate a SMOTE training dataset, and then conduct a statistical count of the number of samples with different quality levels in the SMOTE training dataset.
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline
+		Quality & Count \\
+		\hline
+		5 & 925 \\
+		6 & 925 \\
+		7 & 925 \\
+		4 & 925 \\
+		8 & 925 \\
+		3 & 925 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Classification Approach}\phantom{...}
+
+Train various models separately on 70\% of the data randomly drawn from both the combined training dataset and the SMOTE-enhanced training dataset, and then test these models on the remaining 30\% of the data to calculate their respective Kappa scores.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{tex/kappa}
+	\caption{}
+	\label{fig:kappa}
+\end{figure}
 
 
-For~\cref{eq:test},
-as shown below:
+\section{Conclusions} 
 
-\begin{equation}\label{eq:test}
-a = b \times \sqrt{ab}
-\end{equation}
+In scenarios where models are trained using both the combined training dataset and the SMOTE-enhanced training dataset, there is no significant difference in their performance on the validation set; however, training with the SMOTE-enhanced dataset enhances model performance on the training set. This suggests that the SMOTE method may assist in improving the model's fit to the training data, particularly in cases involving class imbalance in datasets.
 
-\blindmathpaper
+\section{Submission}
 
-\section{Preliminaries} \label{sec-preliminaries}
-
-\blindtext
-
-\gliMarker  %TODO: GLi Here
-
-
-\section{Method} \label{sec-method}
-
-\blindtext
-\blindlist{itemize}[3]
-\blinditemize
-\blindenumerate
-
-\blindmathtrue
-\blindmathfalse
-\blinddescription
-
-\qwuMarker %TODO: QWu Here
-
-\section{Experiment and Analysis} \label{sec-experiment}
-
-
-\begin{table}  \centering
-  \caption{Precision Comparison on Event Detection Methods}
-  \label{tbl:overall-experiments}
-  \begin{tabular}{cccc}
-\toprule
-    % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-    & OR Event Detection & AC Event Detection & TC Event Detection \\
-\midrule
-    precision & 0.83 & 0.69 & 0.46 \\
-    recall & 0.68 & 0.48 & 0.36 \\
-    F-score & 0.747 & 0.57 & 0.4 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-
-\section{Conclusions} \label{sec-conclusions}
-
-\blindtext
+After a comprehensive comparison of the performance of various models under different scenarios, select the Random Forest, Light Gradient Boosting Machine, and Gradient Boosting Classifier as the three models to perform ordinal regression on the test dataset through a voting method (mode), and export the results to a file named xyz.csv.
 
 \section*{Acknowledgement}
+I am grateful for the assistance provided by Baojie Zhang, Tianjiao Wang, and Leyan Li during this period of learning. It is daunting to contemplate how challenging this journey of education would have been without their support.
 
-\lipsum[1]
-
-
-The authors would like to thank \ldots
 
