@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2023.10.19)  10 DEC 2023 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2023.10.19)  11 DEC 2023 17:54
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1352,11 +1352,8 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 [2]
 File: tex/NullValueDetection.eps Graphic file (type eps)
  <tex/NullValueDetection.eps>
-Underfull \vbox (badness 3895) has occurred while \output is active []
-
 File: ./graphics/logos/tulip-logo.eps Graphic file (type eps)
-
-<./graphics/logos/tulip-logo.eps>
+ <./graphics/logos/tulip-logo.eps>
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.79996pt, for example:
@@ -1473,10 +1470,10 @@ Package rerunfilecheck Info: File `hs_report.out' has not changed.
 Here is how much of TeX's memory you used:
  38391 strings out of 478269
  778141 string characters out of 5850370
- 1207777 words of memory out of 5000000
+ 1206772 words of memory out of 5000000
  55795 multiletter control sequences out of 15000+600000
  476187 words of font info for 55 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  120i,13n,134p,1006b,798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hs_report.dvi (12 pages, 54076 bytes).
+Output written on hs_report.dvi (12 pages, 54636 bytes).

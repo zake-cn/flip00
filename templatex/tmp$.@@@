@@ -1,7 +1,7 @@
 -q
 -dNOPAUSE
 -sDEVICE=pbmraw
--sOUTPUTFILE=tmpps17.pbm
+-sOUTPUTFILE=tmpps21.pbm
 -r600x600
 tmp$$.ps
 quit.ps
